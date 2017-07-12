@@ -1,0 +1,33 @@
+% some functions and environments that will be useful
+%
+%%% An imageframe has one fullscreen image as background
+%%% and maybe some text on top.
+\newenvironment{imageframe}[1]
+{
+\setbeamertemplate{background}{%
+\parbox[c][\paperheight]{\paperwidth}{%
+\includegraphics[width=\paperwidth,height=\paperheight]{#1}
+}}
+\begin{frame}
+  \color{white}
+  }{\end{frame}}
+
+
+%%% A wordframe has one word (or few) big and centered
+\newenvironment{wordframe}
+{
+\begin{frame}
+  \bf\usebeamerfont{word frame}
+  }{\end{frame}}
+
+
+%%% A defnframe defines a word or phrase
+\newenvironment{defnframe}[1]
+{
+\begin{frame}
+  \usebeamerfont{title}\usebeamercolor[fg]{box title}\Large #1: \\
+  \vskip0.7cm
+  \usebeamercolor[fg]{normal text}\Large\itshape
+  }{\end{frame}}
+
+\newcommand{\emptyslide}{\begin{frame}[plain]\end{frame}}
