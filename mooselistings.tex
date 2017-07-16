@@ -1,0 +1,33 @@
+\begin{frame}
+\frametitle{MOOSE Physics Representation}
+  \begin{itemize}
+      \item{Highly object-oriented code solves weak form of PDE using finite element method}
+      \item{PETSc solves resulting system of nonlinear equations using generalized minimal residual method (GMRES)}
+      \item{Some of the world's most cutting-edge numerical algorithms and scalable parallel computing are made painlessly accessible to the everyday user}
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{MOOSE Example}
+    In MOOSE, the term $D \nabla^2 u$ is easily represented by:
+  \begin{minted}{c++}
+Real
+GroupDiffusion::computeQpResidual()
+{
+  return _D[_qp][_group] * _grad_test[_i][_qp] *
+         computeConcentrationGradient(_u, _grad_u, _qp);
+}
+
+  \end{minted}
+
+  A vacuum boundary condition in neutronics calculations can easily be represented by:
+  \begin{minted}{c++}
+Real
+VacuumConcBC::computeQpResidual()
+{
+  return _test[_i][_qp] * computeConcentration(_u, _qp) / 2.;
+}
+  \end{minted}
+
+\end{frame}

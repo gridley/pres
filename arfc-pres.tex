@@ -5,19 +5,23 @@
 
 %\documentclass[11pt,handout]{beamer}
 \documentclass[9pt]{beamer}
+%\hypersetup{pdfpagemode=FullScreen}
 \usetheme[white]{Illinois}
 %\title[short title]{long title}
-\title[Short Title]{A Very Very Long Title for a Presentation about Cats}
+\title[MSR Transients]{Molten Salt Reactor Transients}
 %\subtitle[short subtitle]{long subtitle}
-\subtitle[Short SubTitle]{Mostly Kittens}
+\subtitle[]{How Power of The Future Performs In Accidents}
 %\author[short name]{long name}
-\author[Your Name]{Your Name\\Advanced Reactors and Fuel Cycles Group}
+\author[Gavin Ridley]{Gavin Ridley\\Advanced Reactors and Fuel Cycles Group}
 %\date[short date]{long date}
-\date[04.01.2100]{April 1, 2100}
+\date[07.20.2017]{07.20.2017}
 %\institution[short name]{long name}
 \institute[UIUC]{University of Illinois at Urbana-Champaign}
 
 %\usepackage{bbding}
+%
+\usepackage{mathtools}
+\usepackage{commath}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{xspace}
@@ -27,6 +31,7 @@
 \usepackage{microtype} % if using PDF
 \usepackage{bigints}
 \usepackage{minted}
+\usepackage{tikz}
 
 \newcommand{\units}[1] {\:\text{#1}}%
 \newcommand{\SN}{S$_N$}%{S$_\text{N}$}%{$S_N$}%
@@ -38,6 +43,9 @@
 \setbeamertemplate{caption}[numbered]
 %Those icons in the references are terrible looking
 \setbeamertemplate{bibliography item}[text]
+
+%%% Functions and environments from user:
+\input{env-func}
 
 %%%% Acronym support
 
@@ -86,26 +94,47 @@
 }
 
 \section{Motivation}
-\subsection{Cat Behavior}
-\input{cat_behavior}
-\subsection{Cat Appearance}
-\input{cat_appearance}
-\subsection{Cat Math}
-\input{cat_math}
+\subsection{Molten Salt Reactors}
+\input{msrintro}
+\subsection{What We Simulated}
+\input{msre}
+\begin{imageframe}{msrePlant}
+\end{imageframe}
+\input{relevantphysics}
+\subsection{Multiphysics Coupling}
 \section{Methods}
-\subsection{Illinois Colors}
-\input{fierce}
-\section{Conclusion}
+\subsection{MOOSE}
+\begin{imageframe}{moose}
+\end{imageframe}
+\input{mooselistings}
+\subsection{Sustainable, open software}
+\input{moltres}
+\subsection{Group Constant Generation}
+\input{serpent}
+\section{Results \& Conclusion}
+\input{results}
 \input{conclusion}
 \input{acks}
-%%--------------------------------%%
-%%--------------------------------%%
-\begin{frame}[allowframebreaks]
-  \frametitle{References}
-  \bibliographystyle{plain}
-  {\footnotesize \bibliography{bibliography.bib} }
 
-\end{frame}
+{ % all template changes are local to this group.
+    \setbeamertemplate{navigation symbols}{}
+    \begin{frame}[plain]
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                    \vspace{5cm}
+                \includegraphics[width=\paperwidth]{nucular}
+            };
+        \end{tikzpicture}
+     \end{frame}
+}
+%%--------------------------------%%
+%%--------------------------------%%
+%\begin{frame}[allowframebreaks]
+%  \frametitle{References}
+%  \bibliographystyle{plain}
+%  {\footnotesize \bibliography{bibliography.bib} }
+%
+%\end{frame}
 
 %%--------------------------------%%
 

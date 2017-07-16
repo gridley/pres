@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Real}
+\PYG{n}{GroupDiffusion}\PYG{o}{::}\PYG{n}{computeQpResidual}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+  \PYG{k}{return} \PYG{n}{\PYGZus{}D}\PYG{p}{[}\PYG{n}{\PYGZus{}qp}\PYG{p}{][}\PYG{n}{\PYGZus{}group}\PYG{p}{]} \PYG{o}{*} \PYG{n}{\PYGZus{}grad\PYGZus{}test}\PYG{p}{[}\PYG{n}{\PYGZus{}i}\PYG{p}{][}\PYG{n}{\PYGZus{}qp}\PYG{p}{]} \PYG{o}{*}
+         \PYG{n}{computeConcentrationGradient}\PYG{p}{(}\PYG{n}{\PYGZus{}u}\PYG{p}{,} \PYG{n}{\PYGZus{}grad\PYGZus{}u}\PYG{p}{,} \PYG{n}{\PYGZus{}qp}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

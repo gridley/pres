@@ -2,10 +2,14 @@
 %
 %%% An imageframe has one fullscreen image as background
 %%% and maybe some text on top.
+\definecolor{white}{RGB}{253,253,253}
+
+
 \newenvironment{imageframe}[1]
 {
 \setbeamertemplate{background}{%
 \parbox[c][\paperheight]{\paperwidth}{%
+    \vspace{2cm}
 \includegraphics[width=\paperwidth,height=\paperheight]{#1}
 }}
 \begin{frame}
