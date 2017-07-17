@@ -1,15 +1,29 @@
 \begin{frame}
   \frametitle{Group constant generation}
     \begin{columns}
+    \column{5cm}
+    \begin{itemize}
+        \item{Where do coefficients like $\Sigma$, $D$, $\chi$, $\nu$ come from?}
+        \item{\textbf{Serpent 2 - Monte Carlo neutronics}}
+        \begin{itemize}
+            \item{Continuous energy, meaning very close to first-principles physics}
+            \item{Trace millions of neutrons through reactor geometry}
+        \end{itemize}
 
-    \column[t]{5cm}
+    \item{\textit{Behemothly} computationally expensive for transients, 
+        accuracy scales $\mathcal{O}(\sqrt{n}^{-1})$}
+    \end{itemize}
 
-    \column[t]{3.7cm}
+    \includegraphics[width=\textwidth]{xsExample}
+
+    \column{3.7cm}
     \includegraphics[width=\textwidth]{msregeom}
 
-    \includegraphics[width=\textwidth]{msremesh}
+    \animategraphics[loop,width=\textwidth]{12}{tracks-}{0}{499}
+    %\includegraphics[width=\textwidth]{msremesh}
 
     \end{columns}
 
 
 \end{frame}
+
