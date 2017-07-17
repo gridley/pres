@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.1)  17 JUL 2017 02:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.1)  17 JUL 2017 18:16
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1691,33 +1691,20 @@ Package pdftex.def Info: msrePlant.jpg used on input line 103.
  [6
 
  <./msrePlant.jpg>] (./relevantphysics.tex
-Overfull \hbox (2.13258pt too wide) detected at line 42
+Overfull \hbox (2.13258pt too wide) detected at line 54
 [][] \OT1/cmss/m/n/9 = \OMS/cmsy/m/n/9 r ^^A \OT1/mathkerncmss/m/sl/9 D[]\OMS/c
-msy/m/n/9 r\OML/cmm/m/it/9 ^^^[] \OT1/cmss/m/n/9 + [] ^^F[]\OML/cmm/m/it/9 ^^^[
-] \OT1/cmss/m/n/9 + \OML/cmm/m/it/9 ^^_[] []\OT1/cmss/m/n/9 (1 \OMS/cmsy/m/n/9 
-^^@ \OML/cmm/m/it/9 ^^L\OT1/cmss/m/n/9 )\OML/cmm/m/it/9 ^^W\OT1/cmss/m/n/9 ^^F[
-]\OML/cmm/m/it/9 ^^^[] \OT1/cmss/m/n/9 + \OML/cmm/m/it/9 ^^_[] [] ^^U[]\OT1/mat
-hkerncmss/m/sl/9 C[] \OMS/cmsy/m/n/9 ^^@ \OT1/cmss/m/n/9 ^^F[]\OML/cmm/m/it/9 ^
-^^[][][][]
+msy/m/n/9 r[][][] \OT1/cmss/m/n/9 + [] [][][][][] + \OML/cmm/m/it/9 ^^_[] []\OT
+1/cmss/m/n/9 (1 \OMS/cmsy/m/n/9 ^^@ \OML/cmm/m/it/9 ^^L\OT1/cmss/m/n/9 )\OML/cm
+m/m/it/9 ^^W[][][][][] \OT1/cmss/m/n/9 + \OML/cmm/m/it/9 ^^_[] [] ^^U[][][] \OM
+S/cmsy/m/n/9 ^^@ [][][][][][][]
  []
 
 <use imark.pdf> <use imark.pdf>
 File: imark.pdf Graphic file (type pdf)
  <use imark.pdf>
-Package pdftex.def Info: imark.pdf used on input line 42.
+Package pdftex.def Info: imark.pdf used on input line 54.
 (pdftex.def)             Requested size: 13.05508pt x 17.07182pt.
-
-Overfull \vbox (21.71501pt too high) detected at line 42
- []
-
-[7
-
-] <use imark.pdf> <use imark.pdf>
-File: imark.pdf Graphic file (type pdf)
- <use imark.pdf>
-Package pdftex.def Info: imark.pdf used on input line 75.
-(pdftex.def)             Requested size: 13.05508pt x 17.07182pt.
- [8
+ [7
 
 ]) (./arfc-pres.toc)
 <use imark.pdf> <use imark.pdf>
@@ -1725,15 +1712,15 @@ File: imark.pdf Graphic file (type pdf)
  <use imark.pdf>
 Package pdftex.def Info: imark.pdf used on input line 106.
 (pdftex.def)             Requested size: 13.05508pt x 17.07182pt.
- [9
+ [8
 
 ]
-<moose.png, id=200, 1445.4pt x 1084.05pt>
+<moose.png, id=189, 1445.4pt x 1084.05pt>
 File: moose.png Graphic file (type png)
  <use moose.png>
 Package pdftex.def Info: moose.png used on input line 109.
 (pdftex.def)             Requested size: 364.19421pt x 273.14566pt.
- [10
+ [9
 
  <./moose.png>]
 (./mooselistings.tex <use imark.pdf> <use imark.pdf>
@@ -1741,7 +1728,7 @@ File: imark.pdf Graphic file (type pdf)
  <use imark.pdf>
 Package pdftex.def Info: imark.pdf used on input line 9.
 (pdftex.def)             Requested size: 13.05508pt x 17.07182pt.
- [11
+ [10
 
 ]
 \openout4 = `arfc-pres.vrb'.
@@ -1770,10 +1757,10 @@ File: imark.pdf Graphic file (type pdf)
  <use imark.pdf>
 Package pdftex.def Info: imark.pdf used on input line 33.
 (pdftex.def)             Requested size: 13.05508pt x 17.07182pt.
- [12
+ [11
 
 ])
-(./moltres.tex <moltres.png, id=236, 607.26875pt x 466.74374pt>
+(./moltres.tex <moltres.png, id=225, 607.26875pt x 466.74374pt>
 File: moltres.png Graphic file (type png)
 
 <use moltres.png>
@@ -1784,16 +1771,16 @@ File: imark.pdf Graphic file (type pdf)
  <use imark.pdf>
 Package pdftex.def Info: imark.pdf used on input line 21.
 (pdftex.def)             Requested size: 13.05508pt x 17.07182pt.
- [13
+ [12
 
- <./moltres.png>]) (./serpent.tex <xsExample.png, id=249, 605.26125pt x 396.732
+ <./moltres.png>]) (./serpent.tex <xsExample.png, id=237, 605.26125pt x 396.732
 2pt>
 File: xsExample.png Graphic file (type png)
 
 <use xsExample.png>
 Package pdftex.def Info: xsExample.png used on input line 28.
 (pdftex.def)             Requested size: 142.26378pt x 93.25023pt.
- <msregeom.png, id=250, 1129.21875pt x 1129.21875pt>
+ <msregeom.png, id=238, 1129.21875pt x 1129.21875pt>
 File: msregeom.png Graphic file (type png)
 
 <use msregeom.png>
@@ -1927,7 +1914,7 @@ Package pdftex.def Info: imark.pdf used on input line 28.
 Overfull \vbox (19.03189pt too high) detected at line 28
  []
 
-[14
+[13
 
  <./xsExample.png> <./msregeom.png>]) (./arfc-pres.toc) <use imark.pdf>
 <use imark.pdf>
@@ -1935,10 +1922,10 @@ File: imark.pdf Graphic file (type pdf)
  <use imark.pdf>
 Package pdftex.def Info: imark.pdf used on input line 115.
 (pdftex.def)             Requested size: 13.05508pt x 17.07182pt.
- [15
+ [14
 
 ] (./results.tex
-<cuboidal.png, id=3800, 1658.195pt x 1029.8475pt>
+<cuboidal.png, id=3788, 1658.195pt x 1029.8475pt>
 File: cuboidal.png Graphic file (type png)
  <use cuboidal.png>
 Package pdftex.def Info: cuboidal.png used on input line 4.
@@ -1949,25 +1936,29 @@ File: imark.pdf Graphic file (type pdf)
  <use imark.pdf>
 Package pdftex.def Info: imark.pdf used on input line 4.
 (pdftex.def)             Requested size: 13.05508pt x 17.07182pt.
- [16
+ [15
 
  <./cuboidal.png>]
-<rodded.png, id=3809, 520.94624pt x 786.94pt>
+<rodded.png, id=3798, 520.94624pt x 786.94pt>
 File: rodded.png Graphic file (type png)
  <use rodded.png>
-Package pdftex.def Info: rodded.png used on input line 10.
+Package pdftex.def Info: rodded.png used on input line 21.
 (pdftex.def)             Requested size: 160.09264pt x 241.84117pt.
- <use imark.pdf>
-<use imark.pdf>
-File: imark.pdf Graphic file (type pdf)
- <use imark.pdf>
-Package pdftex.def Info: imark.pdf used on input line 10.
-(pdftex.def)             Requested size: 13.05508pt x 17.07182pt.
 
-Overfull \vbox (32.62285pt too high) detected at line 10
+Overfull \hbox (17.82886pt too wide) in paragraph at lines 21--21
+[][]  
  []
 
-[17
+<use imark.pdf> <use imark.pdf>
+File: imark.pdf Graphic file (type pdf)
+ <use imark.pdf>
+Package pdftex.def Info: imark.pdf used on input line 21.
+(pdftex.def)             Requested size: 13.05508pt x 17.07182pt.
+
+Overfull \vbox (32.62285pt too high) detected at line 21
+ []
+
+[16
 
  <./rodded.png>]) (./conclusion.tex <use imark.pdf> <use imark.pdf>
 File: imark.pdf Graphic file (type pdf)
@@ -1975,7 +1966,7 @@ File: imark.pdf Graphic file (type pdf)
 <use imark.pdf>
 Package pdftex.def Info: imark.pdf used on input line 18.
 (pdftex.def)             Requested size: 13.05508pt x 17.07182pt.
- [18
+ [17
 
 ]) (./acks.tex <use imark.pdf> <use imark.pdf>
 File: imark.pdf Graphic file (type pdf)
@@ -1983,16 +1974,16 @@ File: imark.pdf Graphic file (type pdf)
 <use imark.pdf>
 Package pdftex.def Info: imark.pdf used on input line 5.
 (pdftex.def)             Requested size: 13.05508pt x 17.07182pt.
- [19
+ [18
 
-]) <nucular.jpg, id=3835, 1204.5pt x 862.22125pt>
+]) <nucular.jpg, id=3823, 1204.5pt x 862.22125pt>
 File: nucular.jpg Graphic file (type jpg)
 
 <use nucular.jpg>
 Package pdftex.def Info: nucular.jpg used on input line 129.
 (pdftex.def)             Requested size: 364.19536pt x 260.70761pt.
-Package atenddvi Info: Last page = 20.
- [20
+Package atenddvi Info: Last page = 19.
+ [19
 
  <./nucular.jpg>]
 \tf@nav=\write12
@@ -2016,7 +2007,7 @@ Package atveryend Info: Executing hook `AfterLastShipout' on input line 143.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 143.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
 Package rerunfilecheck Info: File `arfc-pres.out' has not changed.
-(rerunfilecheck)             Checksum: 02ADC80677DEB8469F798FFF8C480023;556.
+(rerunfilecheck)             Checksum: 16A95C65267FC474A0D4E0FC7259A5CF;555.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2031,10 +2022,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 143.
  ) 
 Here is how much of TeX's memory you used:
  44530 strings out of 493013
- 832189 string characters out of 6135682
- 1069552 words of memory out of 5000000
- 46678 multiletter control sequences out of 15000+600000
- 15198 words of font info for 66 fonts, out of 8000000 for 9000
+ 832176 string characters out of 6135682
+ 1069623 words of memory out of 5000000
+ 46676 multiletter control sequences out of 15000+600000
+ 15332 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,19n,66p,10392b,801s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb>
@@ -2051,10 +2042,10 @@ s/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on arfc-pres.pdf (20 pages, 8542951 bytes).
+Output written on arfc-pres.pdf (19 pages, 8541269 bytes).
 PDF statistics:
- 3906 PDF objects out of 4296 (max. 8388607)
- 1817 compressed objects within 19 object streams
- 53 named destinations out of 1000 (max. 500000)
+ 3895 PDF objects out of 4296 (max. 8388607)
+ 1807 compressed objects within 19 object streams
+ 51 named destinations out of 1000 (max. 500000)
  22009 words of extra memory for PDF output out of 24883 (max. 10000000)
 

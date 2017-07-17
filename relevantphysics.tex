@@ -1,75 +1,87 @@
 \begin{frame}
-  \frametitle{MSRs: An Intrinsically Coupled System I}
-      \textbf{Neutrons'}
+  \frametitle{MSR Governing Equations}
+      \textbf{Neutrons'} changing concentrations can be described approximately with coupled diffusion equations:
       %\begin{equation}
       %\begin{aligned}
-      %    \frac{1}{v(E)} \pd{\psi}{t} + \hat{\Omega}\cdot \nabla \psi + \textcolor{red}{\Sigma_t} \psi =& \frac{\chi_p(E)}{4 \pi} \int_{0}^{\inf} \nu_p(E') \textcolor{red}{\Sigma_f} \phi dE' + \sum_i \frac{\chi_d(E)}{4 \pi} \lambda _i C_i + \\
+      %    \frac{1}{v(E)} \pd{\psi}{t} + \hat{\Omega}\cdot \nabla \psi + \textcolor{red}{\Sigma_t} \psi =& \frac{\chi_p(E)}{4 \pi} \int_{0}^{\inf} \nu_p(E') \textcolor{red}{\Sigma_f} \textcolor{purple}{\phi} dE' + \sum_i \frac{\chi_d(E)}{4 \pi} \lambda _i C_i + \\
       %                                                                                                  & \int_{4\pi}  \int_{0}^{\inf} \textcolor{red}{\Sigma_s(E'\rightarrow E,\hat{\Omega}'\rightarrow \hat{\Omega})} \psi dE' d\hat{\Omega}\\
       %\end{aligned}
       %\end{equation}
-      changing concentrations can be described approximately with coupled diffusion equations:
-		%% \frac{1}{v_g}\frac{\partial \phi_g}{\partial t} - \nabla \cdot D_g \nabla \phi_g
-		%% + \Sigma_g^r \phi_g = \sum_{g \ne g'}^G \Sigma_{g'\rightarrow g}^s \phi_{g'} + \chi_g^p \sum_{g' = 1}^G (1 - \beta)
-		%% \nu \Sigma_{g'}^f \phi_{g'}
+		%% \frac{1}{v_g}\frac{\partial \textcolor{purple}{\phi}_g}{\partial t} - \nabla \cdot D_g \nabla \phi_g
+		%% + \Sigma_g^r \textcolor{purple}{\phi}_g = \sum_{g \ne g'}^G \Sigma_{g'\rightarrow g}^s \phi_{g'} + \chi_g^p \sum_{g' = 1}^G (1 - \beta)
+		%% \nu \Sigma_{g'}^f \textcolor{purple}{\phi}_{g'}
 \begin{equation}
-				\frac{1}{v_g}\frac{\partial \phi_g}{\partial t}   = \nabla \cdot D_g
-				\nabla \phi_g +
+				\frac{1}{v_g}\frac{\partial \textcolor{purple}{\phi}_g}{\partial t}   = \nabla \cdot D_g
+				\nabla \textcolor{purple}{\phi}_g +
 				\sum_{g \ne g'}^G
-				\Sigma_{g'\rightarrow g}^s \phi_{g'} + \chi_g^p \sum_{g' = 1}^G (1 -
-				\beta) \nu \Sigma_{g'}^f \phi_{g'} + \chi_g^d \sum_i^I \lambda_i C_i - \Sigma_g^r \phi_g
+                \textcolor{red}{\Sigma_{g'\rightarrow g}^s} \textcolor{purple}{\phi}_{g'} + \chi_g^p \sum_{g' = 1}^G (1 -
+                \beta) \nu \textcolor{red}{\Sigma_{g'}^f} \textcolor{purple}{\phi}_{g'} + \chi_g^d \sum_i^I \lambda_i \textcolor{green}{C_i} - \textcolor{red}{\Sigma_g^r} \textcolor{purple}{\phi_g}
 		\label{eq:neutrons}
 \end{equation}
-				where
-				$v_g    $    = \mbox{speed of neutrons in group g} \\
-				$\phi_g $    = \mbox{flux of neutrons in group g} \\
-				$t      $    = \mbox{time} \\
-				$D_g    $    = \mbox{Diffusion coefficient for neutrons in group g} \\
-				$\Sigma_g^r$ = \mbox{macroscopic cross-section for removal of neutrons
-				from group g} \\
-				$\Sigma_{g'\rightarrow g}^s$ = \mbox{macroscopic cross-section of
-				scattering from g' to g} \\
-				$\chi_g^p$   = \mbox{prompt fission spectrum, neutrons in group g} \\
-				$G$          = \mbox{number of discrete groups, g} \\
-				$\nu$        = \mbox{number of neutrons produced per fission} \\
-				$\Sigma_g^f$ = \mbox{macroscopic cross section for fission due to neutrons in group g} \\
-				$\chi_g^d$   = \mbox{delayed fission spectrum, neutrons in group g} \\
-				$I $         = \mbox{number of delayed neutron precursor groups} \\
-				$\beta $     = \mbox{delayed neutron fraction}\\
-				$\lambda_i $ = \mbox{average decay constant of delayed neutron precursors
-				in precursor group i} \\
-				$C_i $       = \mbox{concentration of delayed neutron precursors in precursor
-				group i} .
-\end{frame}
+    \textbf{Delayed neutron precursors} are freshly split atoms that drift in the salt current, later emit neutrons.
 
-\begin{frame}
-    \frametitle{MSRs: An Intrinsically Coupled System II}
-    \textbf{Delayed neutron precursors} are products of freshly split uranium that emit a new neutron after a delay.
-    \textit{critical} to reactor control; they shift power change timescales from picoseconds to seconds despite
-    only being a few tenths of a percent of emitted neutrons.
+    \begin{equation}
+        \frac{\partial \textcolor{green}{C_i}}{\partial t} = \sum_{g'= 1}^G \beta_i \nu
+        \textcolor{red}{\Sigma_{g'}^f} \textcolor{purple}{\phi}_{g'} - \lambda_i \textcolor{green}{C_i} - \frac{\partial}{\partial z} u
+        \textcolor{green}{C_i} \label{eq:precursors}
+    \end{equation}                                                                 				%where
 
-	\begin{equation}
-			\frac{\partial C_i}{\partial t} = \sum_{g'= 1}^G \beta_i \nu
-			\Sigma_{g'}^f \phi_{g'} - \lambda_i C_i - \frac{\partial}{\partial z} u
-			C_i \label{eq:precursors}
-	\end{equation}
-
-    % note, flow is primarily only the +z direction
-
-    \textbf{Heat and temperature} affect the coefficients in Equation \ref{eq:neutrons} significantly. Energy conservation must be solved:
-
+    \textbf{Heat} changes coefficients in other equations.
 \begin{equation}
-        \rho_fc_{p,f}\frac{\partial T_f}{\partial t} + \nabla\cdot\left(\rho_f
-        c_{p,f} \vec{u}\cdot T_f -k_f\nabla T_f\right) =  Q_f
-  \label{eq:fuel_temp}
-\end{equation}
+    \rho_fc_{p,f}\frac{\partial \textcolor{red}{T_f}}{\partial t} + \nabla\cdot\left(\rho_f
+    c_{p,f} \vec{u}\cdot \textcolor{red}{T_f} -k_f\nabla \textcolor{red}{T_f}\right) = \sum_g \textcolor{purple}{\phi_g} \textcolor{red}{\Sigma_{f,g}} E_{f,g}
+  \label{eq:fuel_temp}                                                        				%$v_g    $    = \mbox{speed of neutrons in group g} \\
+\end{equation}                                                                				%$\textcolor{purple}{\phi}_g $    = \mbox{flux of neutrons in group g} \\
 
-\begin{tabular}{cc}
-  $\rho_f $ &= \mbox{density of fuel salt}\\
-  $c_{p,f}$ &= \mbox{specific heat capacity of fuel salt}\\
-  $T_f    $ &= \mbox{temperature of fuel salt}\\
-  $\vec{u}$ &= \mbox{velocity of fuel salt}\\
-  $k_f    $ &= \mbox{thermal conductivity of fuel salt}\\
-  $Q_f    $ &= \mbox{source term}\\
-\end{tabular}
-
+\textcolor{red}{Red values} change with temperature. \textcolor{green}{Green} refers to delated neutron precursors. \textcolor{purple}{Purple} indicates neutron flux.
+				%$t      $    = \mbox{time} \\
+				%$D_g    $    = \mbox{Diffusion coefficient for neutrons in group g} \\
+				%$\Sigma_g^r$ = \mbox{macroscopic cross-section for removal of neutrons
+				%from group g} \\
+				%$\Sigma_{g'\rightarrow g}^s$ = \mbox{macroscopic cross-section of
+				%scattering from g' to g} \\
+				%$\chi_g^p$   = \mbox{prompt fission spectrum, neutrons in group g} \\
+				%$G$          = \mbox{number of discrete groups, g} \\
+				%$\nu$        = \mbox{number of neutrons produced per fission} \\
+				%$\Sigma_g^f$ = \mbox{macroscopic cross section for fission due to neutrons in group g} \\
+				%$\chi_g^d$   = \mbox{delayed fission spectrum, neutrons in group g} \\
+				%$I $         = \mbox{number of delayed neutron precursor groups} \\
+				%$\beta $     = \mbox{delayed neutron fraction}\\
+				%$\lambda_i $ = \mbox{average decay constant of delayed neutron precursors
+				%in precursor group i} \\
+				%$C_i $       = \mbox{concentration of delayed neutron precursors in precursor
+				%group i} .
 \end{frame}
+
+%\begin{frame}
+%    \frametitle{MSRs: An Intrinsically Coupled System II}
+%    \textbf{Delayed neutron precursors} are products of freshly split uranium that emit a new neutron after a delay.
+%    \textit{critical} to reactor control; they shift power change timescales from picoseconds to seconds despite
+%    only being a few tenths of a percent of emitted neutrons.
+%
+%	\begin{equation}
+%			\frac{\partial C_i}{\partial t} = \sum_{g'= 1}^G \beta_i \nu
+%			\Sigma_{g'}^f \textcolor{purple}{\phi}_{g'} - \lambda_i C_i - \frac{\partial}{\partial z} u
+%			C_i \label{eq:precursors}
+%	\end{equation}
+%
+%    % note, flow is primarily only the +z direction
+%
+%    \textbf{Heat and temperature} affect the coefficients in Equation \ref{eq:neutrons} significantly. Energy conservation must be solved:
+%
+%\begin{equation}
+%        \rho_fc_{p,f}\frac{\partial T_f}{\partial t} + \nabla\cdot\left(\rho_f
+%        c_{p,f} \vec{u}\cdot T_f -k_f\nabla T_f\right) =  Q_f
+%  \label{eq:fuel_temp}
+%\end{equation}
+%
+%\begin{tabular}{cc}
+%  $\rho_f $ &= \mbox{density of fuel salt}\\
+%  $c_{p,f}$ &= \mbox{specific heat capacity of fuel salt}\\
+%  $T_f    $ &= \mbox{temperature of fuel salt}\\
+%  $\vec{u}$ &= \mbox{velocity of fuel salt}\\
+%  $k_f    $ &= \mbox{thermal conductivity of fuel salt}\\
+%  $Q_f    $ &= \mbox{source term}\\
+%\end{tabular}
+%
+%\end{frame}
